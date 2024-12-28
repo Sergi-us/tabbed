@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]        = "monospace:size=9";
+static const char font[]        = "JetBrainsMono NF ExtraLight:style=ExtraLight:size=12:antialias=true:autohint=true";
 static const char* normbgcolor  = "#222222";
 static const char* normfgcolor  = "#cccccc";
 static const char* selbgcolor   = "#555555";
@@ -62,5 +62,6 @@ static const Key keys[] = {
 	{ MODKEY,               XK_u,      focusurgent, { 0 } },
 	{ MODKEY|ShiftMask,     XK_u,      toggle,      { .v = (void*) &urgentswitch } },
 
-	{ 0,                    XK_F11,    fullscreen,  { 0 } },
+	/* { 0,                    XK_F11,    fullscreen,  { 0 } }, */
 };
+
