@@ -46,9 +46,16 @@ In SARBS ist dies bereits als Standard-Browser konfiguriert!
 
 ### st mit Tabs (Terminal)
 
+**Empfohlen**: Starte st normal und aktiviere tabbed on-demand:
+- Starte st normal: `st` (mit voller Transparenz)
+- Aktiviere Tabs: `Alt+Shift+T` (bettet aktuelles st in tabbed ein)
+- Weiterer Tab: `Ctrl+Shift+Return` (neuer Tab)
+
+**Alternativ**: Direkt mit tabbed starten:
 ```bash
 tabbed -c st -w
 ```
+⚠️ **Hinweis**: Bei direktem Start geht die st-Transparenz verloren (tabbed-Container ist undurchsichtig)
 
 ### Allgemeine Syntax
 
@@ -65,14 +72,25 @@ tabbed [OPTIONS] PROGRAM -e/-w
 
 Die wichtigsten Keybindings (siehe [config.h](config.h) für alle):
 
+### Tab-Management
 - `Ctrl+Shift+Return` - Neuer Tab
-- `Ctrl+Shift+h` - Vorheriger Tab
-- `Ctrl+Shift+l` - Nächster Tab
-- `Ctrl+Shift+j` - Ersten Tab wechseln
-- `Ctrl+Shift+k` - Letzten Tab wechseln
-- `Ctrl+Shift+q` - Tab schließen
-- `Ctrl+Tab` - Letzten Tab
-- `Ctrl+[1-9]` - Zu Tab 1-9 wechseln
+- `Ctrl+Shift+q` / `Ctrl+Shift+w` - Tab schließen
+
+### Navigation (Vi-Style)
+- `Ctrl+Shift+h` - Vorheriger Tab (←)
+- `Ctrl+Shift+l` - Nächster Tab (→)
+- `Ctrl+Shift+j` - Tab nach links verschieben
+- `Ctrl+Shift+k` - Tab nach rechts verschieben
+
+### Navigation (Pfeiltasten)
+- `Ctrl+Shift+Left` - Vorheriger Tab
+- `Ctrl+Shift+Right` - Nächster Tab
+
+### Schnellzugriff
+- `Ctrl+Tab` - Letzter Tab (toggle)
+- `Ctrl+Shift+1-9` - Zu Tab 1-9 springen
+- `Ctrl+Grave` - Tab per dmenu auswählen
+- `Ctrl+Shift+u` - Zu urgent Tab springen
 
 ## 🎨 Konfiguration
 
